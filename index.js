@@ -45,6 +45,7 @@ function onCheckHandler() {
         let theOne = findUniqueLetter(allLetters)
         resultDrawing.hidden = false;
         resultDrawing.textContent = theOne;
+        error.hidden = true;
     }
 }
 
