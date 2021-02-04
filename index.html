@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Unique Letter</title>
+    <style>
+        body {font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif; background: linear-gradient(90deg, #7F7FD5 0%, #86A8E7 50%, #91EAE4 100%);}
+        .container {width: 100%; max-width: 600px; margin: 0 auto;}.wrapper {padding-top: 10rem;display: flex; flex-direction: column; justify-content: start;}.app-title{color: white;text-transform: uppercase; text-align: center;margin: 0;}
+        .input-box {margin: 40px 0 10px;display: flex; flex-direction: column; background-color: rgba(255, 255, 255, .2); border-radius: 5px; padding: 20px;}.input-box label{margin-right: 15px;display: block; font-size: 16px; color: #fff;cursor: pointer;}
+        .form-top {display: flex; flex-wrap: wrap-reverse; justify-content: space-between; align-items: flex-end;}#text:focus {border: 2px solid black}.error {color: rgb(170, 0, 0);} .clear {margin: 0; background: rgb(103, 157, 228);}
+        #text {resize: vertical;height: 150px;overflow:auto;background:#FFFFFF;border: 1px solid #DBE2EA;box-sizing: border-box;box-shadow: 0 4px 8px rgb(44 39 56 / 4%);border-radius: 5px;min-width: 260px;padding: 5px 16px;transition: border .05s ease-in-out;font-size: 14px;color: #2C2738;margin-top: 7px;outline: none;}
+        button {border:2px solid white;font-weight: bold;color: white;background: linear-gradient(90deg, #7F7FD5 0%, #86A8E7 50%, #91EAE4 100%);padding: 10px 20px;border-radius: 5px;cursor: pointer;display: inline-block;margin-bottom: 10px;margin-top: 10px;text-transform: uppercase;outline: none;transition: box-shadow .1s ease-in-out;}
+        button[disabled] {background: #999999;border-color: #999999;cursor: not-allowed;color: #555555;} button:hover{box-shadow: 0 2px 10px 2px rgb(255 255 255 / 20%);}button[disabled]:hover{box-shadow:none;}
+        .result {color: white; text-align: center;font-weight: bold; font-size: 10rem; margin: 0; line-height: 1em;}.arrow-text {color: white; text-align: center;} .arrow-text span {display: inline-block;transform: rotate(90deg); font-size: 40px; margin: 0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="app-title">Unique Letter</h1>
+            <div class="input-box">
+                <div class="form-top">
+                    <label for="text">Paste here some text</label>
+                    <button class="clear">Clear Field</button>
+                </div>
+                <textarea id="text"></textarea>
+                <p hidden class="error"></p>
+                <button type="button" disabled class="check-text">Get the Unique Letter</button>
+            </div>
+            <div class="arrow-text">
+                <p>Here you will see the result</p>
+                <span>&#10151;</span>
+            </div>
+        </div>
+        <h2 hidden class="result"></h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
